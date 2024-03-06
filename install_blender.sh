@@ -13,5 +13,8 @@ else
 	ln -s /home/ec2-user/$BLENDER_VERSION /home/ec2-user/blenderapp
 fi
 
+if [ ! -d /home/ec2-user/blender ]; then
+    mkdir /home/ec2-user/blender
+fi
 
 

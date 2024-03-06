@@ -179,11 +179,13 @@ if __name__ == '__main__':
             frame_start = body["frame_start"]
 
 
-            configFile = "/home/ec2-user/config.py"
+            #configFile = "/home/ec2-user/config.py"
             render_device = "CUDA"
+            configFile = "/home/ec2-user/blender_render/GPUconfig.py"
             if "arch" in body.keys():
                 if body["arch"] == "CPU":
                     render_device = "CPU"
+                    configFile = "/home/ec2-user/blender_render/CPUconfig.py"
 
             if not os.path.isfile(configFile):
                 print ("ERROR bad config file %s" % configFile)
