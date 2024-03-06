@@ -18,3 +18,10 @@ bpy.context.scene.cycles.device = 'GPU'
 
 #bpy.data.scenes["william"].render.filepath = "/tmp/output.png"
 #bpy.ops.render.render(write_still=True)
+
+print("now changing all the file output nodes (if any) to match the render path", bpy.context.scene.render.filepath)
+
+for node in bpy.context.scene.node_tree.nodes:
+    if isinstance(node, bpy.types.CompositorNodeOutputFile):
+        print("Found file output node with path", node.base_path)
+        node.base_path = bpy.context.scene.render.filepath
