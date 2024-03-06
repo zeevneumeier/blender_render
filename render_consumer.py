@@ -9,7 +9,7 @@ from hashlib import md5
 ROOT = "/home/ec2-user/"
 BUCKET = "zeev-blender"
 
-sqs = boto3.resource('sqs')
+sqs = boto3.resource('sqs', region_name="us-west-2")
 
 #s3 = boto3.resource('s3')
 s3 = boto3.client('s3')
