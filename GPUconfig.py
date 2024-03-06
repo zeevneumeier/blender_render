@@ -12,9 +12,9 @@ for device in bpy.context.preferences.addons['cycles'].preferences.devices:
 bpy.context.scene.cycles.device = 'GPU'
 #bpy.context.scene.cycles.device = 'CPU'
 
-for scene in bpy.data.scenes:
-    scene.render.tile_x = 192 
-    scene.render.tile_y = 108
+#for scene in bpy.data.scenes:
+#    scene.render.tile_x = 192
+#    scene.render.tile_y = 108
 
 #bpy.data.scenes["william"].render.filepath = "/tmp/output.png"
 #bpy.ops.render.render(write_still=True)
