@@ -17,4 +17,6 @@ if [ ! -d /home/ec2-user/blender ]; then
     mkdir /home/ec2-user/blender
 fi
 
+sudo yum install -y libEGL
+
 
